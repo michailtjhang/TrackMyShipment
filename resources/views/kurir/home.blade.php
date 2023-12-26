@@ -66,40 +66,43 @@
                                     {{-- Modal --}}
                                     <div class="modal fade" id="exampleModalCenter{{$items->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalCenterTitle">Pengubahan Status pengiriman</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="{{url('kurir/home/store/'.$items->id)}}" method="post" enctype="multipart/form-data">
-                                                    @csrf
-                                                    <div class="col-sm-10 my-4">
-                                                    @php
-                                                        if ($items->status == 'pengiriman') {
-                                                            $status = ['pengiriman', 'terkirim'];
-                                                        } else {
-                                                            $status = ['penjemputan', 'pengiriman'];
-                                                        }
-                                                    @endphp
-                                                    @foreach ($status as $row)
-                                                    @php $sel = ($row == $items->status) ? 'checked' : ''; @endphp
-                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                        <input class="form-check-input" type="radio" name="status" id="gridRadios_{{$loop->iteration}}" value="{{$row}}" {{$sel}}>
-                                                        <label class="form-check-label" for="gridRadios_{{$loop->iteration}}">
-                                                            {{$row}}
-                                                        </label>
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenterTitle">Pengubahan Status pengiriman</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="{{url('kurir/home/store/'.$items->id)}}" method="post" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <fieldset class="row mb-3">
+                                                            <div class="col-sm-10">
+                                                            @php
+                                                                if ($items->status == 'pengiriman') {
+                                                                    $status = ['pengiriman', 'terkirim'];
+                                                                } else {
+                                                                    $status = ['penjemputan', 'pengiriman'];
+                                                                }
+                                                            @endphp
+                                                            @foreach ($status as $row)
+                                                            @php $sel = ($row == $items->status) ? 'checked' : ''; @endphp
+                                                                <div class="custom-control custom-radio custom-control-inline">
+                                                                <input class="form-check-input" type="radio" name="status" id="gridRadios_{{$loop->iteration}}" value="{{$row}}" {{$sel}}>
+                                                                <label class="form-check-label" for="gridRadios_{{$loop->iteration}}">
+                                                                    {{$row}}
+                                                                </label>
+                                                                </div>
+                                                            @endforeach
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                                                         </div>
-                                                    @endforeach
-                                                    </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                                                </form>
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </td>
