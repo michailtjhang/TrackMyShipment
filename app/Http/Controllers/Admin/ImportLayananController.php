@@ -11,6 +11,11 @@ class ImportLayananController extends Controller
 {
     public function importLayanan(Request $request)
     {
+        $request->validate(
+            [
+                'file' => 'required',
+            ]);
+
         Excel::import(new LayananImport, $request->file('file'));
 
         return redirect('admin/layanan')->with('success', 'berhasil Bertambah!');

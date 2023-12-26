@@ -3,21 +3,30 @@
 namespace App\Imports;
 
 use App\Models\Layanan;
-use illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\ToCollection;
+use Maatwebsite\Excel\Concerns\Importable;
+use Maatwebsite\Excel\Concerns\SkipsFailures;
+use Maatwebsite\Excel\Concerns\SkipsOnFailure;
+use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithValidation;
 
-class LayananImport implements ToCollection, WithHeadingRow
+class LayananImport implements SkipsOnFailure, ToModel, WithHeadingRow, WithValidation
 {
-    public function collection(Collection $rows)
+    use Importable, SkipsFailures;
+
+    public function model(array $row)
     {
-        foreach ($rows as $row) {
+        return new Layanan([
+            'nama_layanan' => $row['nama'],
+            'biaya' => $row['biaya'],
+        ]);
+    }
 
-            Layanan::create([
-                'nama_layanan' => $row['nama'],
-                'biaya' => $row['biaya'],
-            ]);
-
-        }
+    public function rules(): array
+    {
+        return [
+            'nama' => 'required|max:45',
+            'biaya' => 'required|numeric|unique:layanan',
+        ];
     }
 }

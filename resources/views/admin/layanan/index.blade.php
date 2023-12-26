@@ -41,6 +41,17 @@
                 <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#exampleModal">
                   Import <i class="fas fa-upload"></i>
                 </button>
+
+                @if($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                  </div>
+                @endif
+                
                 <div class="table-responsive">
                     <table id="datapegawai" class="table">
                         <thead>
