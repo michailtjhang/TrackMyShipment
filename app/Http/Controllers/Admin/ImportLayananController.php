@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Imports\LayananImport;
 use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
 
 class ImportLayananController extends Controller
 {
@@ -14,9 +13,17 @@ class ImportLayananController extends Controller
         $request->validate(
             [
                 'file' => 'required',
-            ]);
+            ]
+        );
 
-        Excel::import(new LayananImport, $request->file('file'));
+        $file = $request->file('file');
+
+        $import = new LayananImport;
+        $import->import($file);
+
+        if ($import->failures()) {
+            return back()->withFailures($import->failures());
+        }
 
         return redirect('admin/layanan')->with('success', 'berhasil Bertambah!');
     }

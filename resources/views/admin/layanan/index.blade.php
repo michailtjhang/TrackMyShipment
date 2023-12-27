@@ -43,13 +43,30 @@
                 </button>
 
                 @if($errors->any())
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger" role="alert">
                     <ul>
                         @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
+                          <li>{{$error}}</li>
                         @endforeach
                     </ul>
                   </div>
+                @endif
+
+                @if(session()->has('failures'))
+                  <table class="table table-warning">
+                    @foreach (session()->get('failures') as $validasi)
+                      <tr>
+                        <td>Baris ke-{{ $validasi->row() }} di excel</td>
+                        <td>
+                          <ul>
+                            @foreach($validasi->errors() as $error)
+                              <li>{{$error}}</li>
+                            @endforeach
+                          </ul>
+                        </td>
+                      </tr>
+                    @endforeach
+                  </table>
                 @endif
                 
                 <div class="table-responsive">

@@ -25,8 +25,8 @@ class LayananImport implements SkipsOnFailure, ToModel, WithHeadingRow, WithVali
     public function rules(): array
     {
         return [
-            'nama' => 'required|max:45',
-            'biaya' => 'required|numeric|unique:layanan',
+            'nama_layanan' => 'required|max:45|unique:layanan',
+            'biaya' => 'required|numeric',
         ];
     }
 }
