@@ -61,10 +61,10 @@ class homeKurirController extends Controller
 
         $photo = $request->file('bukti_foto');
         $extension = $photo->getClientOriginalExtension();
-        $fileName = time() . '.' . $extension;
+        $fileName = time().'.'.$extension;
 
         $request->bukti_foto->move(storage_path('app/public/bukti_foto'), $fileName);
-        
+
         $pengiriman->bukti_foto = $fileName;
         $pengiriman = Pengiriman::find($id);
         $pengiriman->status = $request->status;
