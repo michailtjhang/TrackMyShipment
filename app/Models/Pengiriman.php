@@ -13,7 +13,7 @@ class Pengiriman extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['kode', 'tanggal', 'lokasi_tujuan', 'status', 'paket_id', 'layanan_id', 'penerima_id', 'akun_id', 'kurir_id'];
+    protected $fillable = ['kode', 'tanggal', 'lokasi_tujuan', 'status', 'bukti_foto', 'paket_id', 'layanan_id', 'penerima_id', 'akun_id', 'kurir_id'];
 
     public function paket()
     {
