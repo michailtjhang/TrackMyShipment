@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Des 2023 pada 07.34
+-- Waktu pembuatan: 28 Des 2023 pada 05.37
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -219,6 +219,7 @@ CREATE TABLE `pengiriman` (
   `tanggal` date NOT NULL,
   `lokasi_tujuan` varchar(255) NOT NULL,
   `status` enum('penjemputan','pengiriman','terkirim') NOT NULL,
+  `bukti_foto` varchar(50) DEFAULT NULL,
   `paket_id` int(11) NOT NULL,
   `layanan_id` int(11) NOT NULL,
   `penerima_id` int(11) NOT NULL,
@@ -229,12 +230,12 @@ CREATE TABLE `pengiriman` (
 -- Dumping data untuk tabel `pengiriman`
 --
 
-INSERT INTO `pengiriman` (`id`, `kode`, `tanggal`, `lokasi_tujuan`, `status`, `paket_id`, `layanan_id`, `penerima_id`, `users_id`) VALUES
-(1, '1234567890', '2023-11-12', 'Jakarta', 'penjemputan', 1, 1, 1, 1),
-(2, '9876543210', '2023-11-13', 'Bandung', 'pengiriman', 2, 1, 2, 1),
-(3, '0987654321', '2023-11-14', 'Semarang', 'pengiriman', 3, 1, 2, 2),
-(4, '1987654320', '2023-11-15', 'Surabaya', 'terkirim', 4, 1, 1, 2),
-(5, '0198765432', '2023-11-16', 'Yogyakarta', 'penjemputan', 5, 1, 3, 2);
+INSERT INTO `pengiriman` (`id`, `kode`, `tanggal`, `lokasi_tujuan`, `status`, `bukti_foto`, `paket_id`, `layanan_id`, `penerima_id`, `users_id`) VALUES
+(1, '1234567890', '2023-11-12', 'Jakarta', 'penjemputan', NULL, 1, 1, 1, 1),
+(2, '9876543210', '2023-11-13', 'Bandung', 'pengiriman', NULL, 2, 1, 2, 1),
+(3, '0987654321', '2023-11-14', 'Semarang', 'pengiriman', NULL, 3, 1, 2, 2),
+(4, '1987654320', '2023-11-15', 'Surabaya', 'terkirim', NULL, 4, 1, 1, 2),
+(5, '0198765432', '2023-11-16', 'Yogyakarta', 'penjemputan', NULL, 5, 1, 3, 2);
 
 -- --------------------------------------------------------
 
