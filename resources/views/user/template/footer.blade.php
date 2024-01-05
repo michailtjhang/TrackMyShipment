@@ -1,6 +1,6 @@
 <footer id="footer" class="footer">
   <div class="copyright">
-    &copy; Copyright <strong><span>Logistik</span></strong>. All Rights Reserved
+    &copy; Copyright <strong><span>TrackMyShipment</span></strong>. All Rights Reserved
   </div>
 </footer><!-- End Footer -->
 

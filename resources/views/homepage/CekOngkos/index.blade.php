@@ -1,6 +1,6 @@
 @extends('homepage.template.apphomepage')
 
-@section('title', 'cek ongkos kirim paket')
+@section('title', 'Cek Ongkos')
 
 @section('content')
 

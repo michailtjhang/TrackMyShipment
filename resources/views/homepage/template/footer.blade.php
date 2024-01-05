@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong>Logistik </strong>2023.
+            &copy; Copyright <strong>TrackMyShip </strong>2023.
         </div>
     </div>
     </div>
