@@ -72,7 +72,7 @@ Swal.fire({
       willOpen: () => {
         Swal.showLoading();
         // Panggil AJAX setelah simulasi waktu loading
-        fetch("http://127.0.0.1:8000/api/lacak", settings)
+        fetch("https://peserta31.msib5.hendevane.com/TrackMyShipment/public/api/lacak", settings)
         .then(response => response.json())
         .then(data => {
           Swal.close();
