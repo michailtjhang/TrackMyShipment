@@ -54,12 +54,13 @@
     </section>
     <script>
 function cek(){
-    var settings = {
-  "url": "http://127.0.0.1:8000/api/lacak",
+  var settings = {
+  "url": "https://peserta31.msib5.hendevane.com/TrackMyShipment/public/api/lacak",
   "method": "GET",
   "timeout": 0,
   "headers": {
-    "Cookie": "XSRF-TOKEN=eyJpdiI6IjBjL29XS1BTL05KS1ZRdThYRkc0clE9PSIsInZhbHVlIjoiRGJVbXRrdVcrOFFrditUSDRxRkhQb1ptbWZ5akhpOE92Q29QTzlYdnlLWVAvdEVXTjVMZElESnNOdWJTeUVNR3lmOE9CRlo4OUZZQ2M0elQ0UTdsdExKb1RKeVFJaGc5UWVEZHpYUE94N1g0aHdWZTdyWU5RQzFmU2Y5MkRsbXIiLCJtYWMiOiJlMTM0ODJkZjkyZGEwYWRhMDFmZGFkMTAxZjg1ZDRiYTY5NGMzYTU4MzFhNzEwZWU2OWNlYTEyMDc3MTM4NTIxIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IldDNVgzajVnTkF3MWU2THR6MXJiSkE9PSIsInZhbHVlIjoiSHF1cUYrSXBLazBNSXYrT3dtWjNJOUpscS9adTB0NXcyVHBUcDA2SWhPUU5FV3U1SHhtQ2xsSGtoR3pSOGJUeS9FRDFUNzVjYWdmTTFzYzZtYTNBTHFIbjRaZXNtTnN1WS9VS1Y4M2NydnJOSzk1RzJGVDFDcktNL1NPVDNvNkEiLCJtYWMiOiIyZDMxODY1MDRkMWVhNThlNDQyNDU5ZWEwNzM3YzAxMGViODA1ODkyYjVlNGFlMGY0ZjJjNzAxNDE1MGZhYTEwIiwidGFnIjoiIn0%3D"
+    "Accept": "application/json",
+    "Content-Type": "application/json"
   },
 };
 Swal.fire({
