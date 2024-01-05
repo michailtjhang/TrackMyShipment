@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\api\AuthController;
+use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\KurirController;
-use App\Http\Controllers\api\LacakController;
+use App\Http\Controllers\Api\LacakController;
 use App\Http\Controllers\Api\LayananController;
 use Illuminate\Support\Facades\Route;
 
