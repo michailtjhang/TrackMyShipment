@@ -78,8 +78,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/laporan/laporanPDF', [LaporanController::class, 'exportPDF']);
         Route::get('/laporan/laporanExcel', [LaporanController::class, 'exportPengiriman']);
 
-        // import excel
+        // import & export excel
         Route::post('layanan/importLayanan', [ImportLayananController::class, 'importLayanan']);
+        Route::get('/format/formatexcel', [ImportLayananController::class, 'formatexport']);
     });
 });
 

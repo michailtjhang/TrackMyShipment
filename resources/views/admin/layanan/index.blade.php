@@ -17,6 +17,7 @@
             </div>
             <div class="modal-body">
                 <input type="file" name="file" class="form-control">
+                <p><a href="{{url('admin/format/formatexcel')}}" class="link-primary">Format Excel Layanan</a></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
