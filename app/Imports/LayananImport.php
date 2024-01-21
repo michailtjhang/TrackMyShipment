@@ -17,7 +17,7 @@ class LayananImport implements SkipsOnFailure, ToModel, WithHeadingRow, WithVali
     public function model(array $row)
     {
         return new Layanan([
-            'nama_layanan' => $row['nama'],
+            'nama_layanan' => $row['nama_layanan'],
             'biaya' => $row['biaya'],
         ]);
     }

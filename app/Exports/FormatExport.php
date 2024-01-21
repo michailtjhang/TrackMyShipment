@@ -9,7 +9,7 @@ class FormatExport implements  WithHeadings
     public function headings(): array
     {
         return [
-            'nama',
+            'nama_layanan',
             'biaya',
         ];
     }
