@@ -59,8 +59,8 @@
                                 @enderror 
                             </div>
                             <div class="form-floating mb-3  ">
-                                <select class="form-select @error('layanan') is-invalid @enderror" name="layanan" id="layanan" aria-label="Floating label select example">
-                                    <option selected>--- Nama Layanan ---</option>
+                                <select class="form-select @error('layanan') is-invalid @enderror" name="layanan" id="layanan" aria-label="Floating label select example" defaultValue="">
+                                    <option hidden value="">--- Nama Layanan ---</option>
                                     @foreach($layanan as $l)
                                     <option value="{{$l->id}}">{{$l->nama_layanan}} - Rp. {{$l->biaya}}</option>
                                     @endforeach

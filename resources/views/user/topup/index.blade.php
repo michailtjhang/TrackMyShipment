@@ -25,39 +25,42 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <div class="row mb-3 invisible">
-                <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
-                <div class="col-sm-10">
-                  <input type="datetime-local" class="form-control" id="waktu" name="waktu" readonly>
-                </div>
-              </div>
-              <fieldset class="row mb-3">
-                <legend class="col-form-label col-sm-2 pt-0">Saldo</legend>
-                <div class="col-sm-10">
-                  @foreach ($uang as $items)
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="form-check-input" type="radio" name="saldo" id="gridRadios_{{$loop->iteration}}" value="{{$items}}">
-                      <label class="form-check-label" for="gridRadios_{{$loop->iteration}}">
-                        {{$items}}
-                      </label>
+            <div class="modal-body bg-secondary-light">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="bg-light rounded h-100 p-4">
+                      <div class="form-floating mb-3 invisible">
+                        <input type="datetime-local" class="form-control" id="waktu" name="waktu" readonly>
+                        <label for="waktu">Waktu</label>
+                      </div>
+
+                      <fieldset class="row mb-3 bg-secondary-light rounded m-1">
+                        <legend class="col-form-label">Saldo</legend>
+                        <div class="col-sm-12">
+                          @foreach ($uang as $items)
+                            <div class="form-check form-check-inline mr-auto">
+                              <input class="form-check-input" type="radio" name="saldo" id="gridRadios_{{$loop->iteration}}" value="{{$items}}">
+                              <label class="form-check-label" for="gridRadios_{{$loop->iteration}}">
+                                {{$items}}
+                              </label>
+                            </div>
+                          @endforeach
+                        </div>
+                      </fieldset>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="bonus" name="bonus" readonly>
+                        <label for="bonus">Bonus</label>
+                      </div>
                     </div>
-                  @endforeach
-                </div>
-              </fieldset>
-              <div class="row mb-3">
-                <label for="bonus" class="col-sm-2 col-form-label">Bonus</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="bonus" name="bonus" readonly>
+                    <div class="form-floating mb-3 invisible">
+                      <input type="text" class="form-control" id="dompet_id" name="dompet_id" readonly value="{{Auth::user()->id}}">
+                      <label for="bonus">Dompet id</label>
+                    </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row mb-3 invisible">
-              <label for="bonus" class="col-sm-2 col-form-label">Dompet id</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="dompet_id" name="dompet_id" readonly value="{{Auth::user()->id}}">
-              </div>
-            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
               <button type="submit" id="" name="submit" class="btn btn-primary">Submit</button>
