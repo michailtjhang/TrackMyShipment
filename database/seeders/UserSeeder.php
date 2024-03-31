@@ -5,11 +5,11 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AkunSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('Akun')->insert([
+        DB::table('users')->insert([
             [
                 'fullname' => 'Khoirul Huda',
                 'username' => 'huda',
