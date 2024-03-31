@@ -18,6 +18,10 @@ class DompetSeeder extends Seeder
                 'saldo' => '30000',
                 'bonus' => '3',
             ],
+            [
+                'saldo' => '10000',
+                'bonus' => '1',
+            ],
         ]);
     }
 }
