@@ -10,6 +10,12 @@
 # About Logistik
 TrackMyShipment adalah aplikasi pengiriman yang menawarkan berbagai keunggulan, termasuk pengiriman yang efisien, pengiriman yang cepat, dan tarif pengiriman yang mudah. Aplikasi ini adalah pilihan yang tepat untuk Anda yang ingin mengirim barang dengan mudah, cepat, dan efisien.
 
+##Fork Repository
+- Link Repository My Projek in Team
+  ```bash
+  https://github.com/khoirulhuda07/final_project_Msib5_Kelompok3.git
+  ```
+
 ## Requirements
 <a href="https://laravel.com/docs/10.x/releases"><img src="https://img.shields.io/badge/laravel-v10-blue" alt="version laravel"></a>
 <a href="https://www.php.net/releases/8.2/en.php"><img src="https://img.shields.io/badge/PHP-v8.2.4-blue" alt="version php"></a>
@@ -20,7 +26,7 @@ TrackMyShipment adalah aplikasi pengiriman yang menawarkan berbagai keunggulan, 
 - download zip <a href="https://github.com/khoirulhuda07/final_project_Msib5_Kelompok3/archive/refs/heads/master.zip">Klik disini</a> 
 - atau clone di terminal :
     ```bash
-    git clone https://github.com/khoirulhuda07/final_project_Msib5_Kelompok3.git
+    git clone https://github.com/michailtjhang/TrackMyShipment.git
     ```
 
 ## Setup
