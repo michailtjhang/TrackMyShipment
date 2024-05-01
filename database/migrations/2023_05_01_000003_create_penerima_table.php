@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('paket', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->double('berat');
-            $table->text('deskripsi');
+        Schema::create('penerima', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama', 45);
+            $table->string('nomor_telepon', 45);
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('paket');
+        Schema::dropIfExists('penerima');
     }
 };

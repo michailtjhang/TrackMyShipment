@@ -9,12 +9,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kurir', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nama_kurir')->nullable();
-            $table->longText('nomor_telepon')->nullable();
-            $table->string('jadwal')->nullable();
-            $table->bigInteger('layanan_id');
+            $table->id();
+            $table->string('nama_kurir', 45);
+            $table->string('nomor_telepon', 45)->nullable();
+            $table->string('jadwal', 45)->nullable();
+            $table->unsignedBigInteger('layanan_id');
             $table->timestamps();
+
+            $table->foreign('layanan_id')->references('id')->on('layanan')->onDelete('cascade');
         });
     }
 

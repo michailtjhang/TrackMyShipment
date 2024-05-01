@@ -8,16 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('dompet', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('saldo')->nullable();
-            $table->string('bonus')->nullable();
+        Schema::create('layanan', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_layanan', 45)->unique();
+            $table->double('biaya', 10, 2);
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('dompet');
+        Schema::dropIfExists('layanan');
     }
 };
