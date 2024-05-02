@@ -282,7 +282,7 @@
 
                 <div class="col-lg-3 col-md-6 mx-auto" data-aos="zoom-in-up" data-aos-delay="300">
                     <div class="member">
-                        <div class="pic"><img src="https://images2.imgbox.com/46/9f/27P6RAM5_o.png" alt="" width="100%" height="100%"></div>
+                        <div class="pic"><img src="https://images2.imgbox.com/0f/91/fafTPofm_o.png" alt="" width="100%" height="100%"></div>
                         <div class="details">
                             <h4>Michail</h4>
                             <span>Back End Developer</span>
