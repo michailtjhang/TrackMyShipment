@@ -40,7 +40,7 @@
                 <!-- input ke tiga -->
                 <div class="form-floating mb-3">
                   <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="floatingDeskripsi" placeholder="Masukkan Email" value="">
-                  <label for="floatingDeskripsi"></label>
+                  <label for="floatingDeskripsi">Email</label>
                   @error('email')
                   <div class="invalid-feedback">{{$message}}</div>
                   @enderror
