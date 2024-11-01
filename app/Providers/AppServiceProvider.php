@@ -24,9 +24,5 @@ class AppServiceProvider extends ServiceProvider
         if (env('APP_ENV') != 'local') {
             URL::forceScheme('https');
         }
-        $clockworkPath = '/tmp/clockwork';
-        if (!File::exists($clockworkPath)) {
-            File::makeDirectory($clockworkPath, 0777, true);
-        }
     }
 }
