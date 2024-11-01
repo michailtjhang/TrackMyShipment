@@ -2,38 +2,32 @@
     "version": 2,
     "builds": [
         {
+            "src": "api/index.php",
+            "use": "vercel-php@0.6.1"
+        },
+        {
             "src": "package.json",
             "use": "@vercel/static-build",
             "config": {
                 "distDir": "public"
             }
-        },
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.6.1"
         }
     ],
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.1"
-        }
-    },
     "routes": [
         {
             "src": "/img/(.*)",
-            "dest": "/public/img/"
+            "dest": "/public/img/$1"
         },
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
-    "outputDirectory": "public",
     "env": {
         "APP_NAME": "AgroBudaya",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://agro-budaya.vercel.app/",
+        "APP_URL": "https://track-my-shipment.vercel.app/",
         
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
