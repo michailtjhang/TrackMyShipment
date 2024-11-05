@@ -27,7 +27,7 @@
             "dest": "/public/user/"
         },
         {
-            "src": "logo/(.*)",
+            "src": "/logo/(.*)",
             "dest": "/public/logo/"
         },
         {
