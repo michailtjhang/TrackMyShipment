@@ -15,8 +15,24 @@
     ],
     "routes": [
         {
-            "src": "/img/(.*)",
-            "dest": "/public/img/$1"
+            "src": "/homepage/(.*)",
+            "dest": "/public/homepage/"
+        },
+        {
+            "src": "/admin/(.*)",
+            "dest": "/public/admin/"
+        },
+        {
+            "src": "/user/(.*)",
+            "dest": "/public/user/"
+        },
+        {
+            "src": "logo/(.*)",
+            "dest": "/public/logo/"
+        },
+        {
+            "src": "/storage/(.*)",
+            "dest": "/public/storage/"
         },
         {
             "src": "/(.*)",
